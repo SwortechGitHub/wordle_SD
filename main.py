@@ -10,7 +10,7 @@ def read_all_words():
         try:
             if 4 < int(sys.argv[1]) < 9:
                 try:
-                    with open(f'collections/{sys.argv[1]}.txt', 'r') as file:
+                    with open(f'{sys.argv[1]}.txt', 'r') as file:
                         all_words = file.read().split()
                 except FileNotFoundError:
                     raise FileNotFoundError(f'No file found for the given number: {sys.argv[1]}')
